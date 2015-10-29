@@ -6,8 +6,9 @@ describe Config::Jshint do
   it_behaves_like "a service based linter" do
     let(:raw_config) do
       <<-EOS.strip_heredoc
-        rules:
-            quotes: [2, "double"]
+        {
+          "maxlen": 80,
+        }
       EOS
     end
 
