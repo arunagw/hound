@@ -167,7 +167,7 @@ describe StyleChecker do
       end
 
       context "when JSHint is enabled" do
-        it "does not immediately return violations" do
+        it "return violations" do
           commit_file = stub_commit_file("test.js", "var test = 'test'")
           head_commit = stub_head_commit(
             HoundConfig::CONFIG_FILE => <<-EOS.strip_heredoc
