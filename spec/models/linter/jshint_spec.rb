@@ -10,9 +10,9 @@ describe Linter::Jshint do
       end
     end
 
-    context "given a .coffee.js file" do
+    context "given a .js.coffee file" do
       it "returns false" do
-        result = Linter::Jshint.can_lint?("foo.coffee.js")
+        result = Linter::Jshint.can_lint?("foo.js.coffee")
 
         expect(result).to eq false
       end
